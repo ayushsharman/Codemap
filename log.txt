@@ -1,41 +1,41 @@
-Sat May 21 08:00:18 2022
+Sat May 21 08:18:15 2022
 Windows-10-10.0.22000
 Ren'Py 7.5.0.22050204n
  
 
-Bootstrap to the start of init.init took 0.15s
+Bootstrap to the start of init.init took 0.11s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.44s
+Loading script took 0.36s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: WindowsError(126, 'The specified module could not be found')
 Running init code took 0.07s
 Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
+Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Ayush Sharma\\AppData\\Roaming/RenPy/backups\\Codemap':
-Dump and make backups. took 0.10s
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.03s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.09s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.10s
+Interface start took 0.07s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -45,5 +45,54 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) UHD Graphics'
 Version: '4.6.0 - Build 30.0.100.9864'
 Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1731, 974) drawable=(1731, 974)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 161.39s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: WindowsError(126, 'The specified module could not be found')
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Ayush Sharma\\AppData\\Roaming/RenPy/backups\\Codemap':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics'
+Version: '4.6.0 - Build 30.0.100.9864'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1731, 974) drawable=(1731, 974)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1920, 974) drawable=(1920, 974)
+Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1731, 974) drawable=(1731, 974)
 Maximum texture size: 4096x4096

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 382: expected menuitem
-    hide pic3
-    ^
+File "game/script.rpy", line 50: queue requires a channel
+    queue
+         ^
 
 Ren'Py Version: Ren'Py 7.5.0.22050204n
-Sat May 21 07:49:47 2022
+Sat May 21 08:15:51 2022

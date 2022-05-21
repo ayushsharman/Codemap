@@ -4,7 +4,6 @@
 # name of the character.
 
 
-
 define mc = Character(["mc"],
                      who_color="#c8ffc8")
 
@@ -21,6 +20,10 @@ image pic1 = "1.png"
 image pic2 = "2.png"
 image pic3 = "3.png"
 image over = "over.png"
+
+define main = "main.mp3"
+define sub = "sub.mp3"
+define victory = "victory.mp3"
 
 # The game starts here.
 
@@ -43,6 +46,10 @@ python:
 
     if not mc:
          mc = "Frank Smith"
+
+
+play music main volume 0.2
+queue music sub volume 0.1
 
 "Hello [mc]! Let me assist you with the basics. Press enter to continue."
 
@@ -258,6 +265,8 @@ label dPit:
     
 show daisy
 
+play music victory fadein 1.0
+
 d "There's time in the competitions, why not we hangout together till that time in the fountain park!"
     
 menu:
@@ -367,6 +376,7 @@ menu:
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Neither code 1 nor code 2":
+        play music victory fadein 1.0
         "Congratulations! You won the game"
         show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
@@ -400,6 +410,7 @@ menu:
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Neither code 1 nor code 2":
+        play music victory fadein 1.0
         "Congratulations! You won the game"
         show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
@@ -451,6 +462,7 @@ menu:
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "4":
+        play music victory fadein 1.0
         "Congratulations! You won the game"
         show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."

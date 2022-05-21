@@ -17,6 +17,10 @@ image daisy = "daisy.png"
 image eric = "eric.png"
 image pat = "pat.png"
 image dev = "dev.png"
+image pic1 = "1.png"
+image pic2 = "2.png"
+image pic3 = "3.png"
+image over = "over.png"
 
 # The game starts here.
 
@@ -172,6 +176,8 @@ menu:
 
 "To unlock this lock you need to choose the correct option"
 
+show pic1
+
 # #include <iostream> 
 # #include <string>
 # using namespace std; 
@@ -211,6 +217,7 @@ python:
     ans = ans.strip()
 
 if (ans != "Y2K Bug"):
+    show over
     e "Dare not to talk with Buggerman when you can't answer me on bugs! Leave the place before you die."
     return
 else:    
@@ -218,15 +225,20 @@ else:
 
 
 label pattStory:
-  
+
+show pic1
+"Choose the correct option"
+hide pic1
 menu:
     "Code":
         "Wrong Choice!!"
+        show over
         "Suddenly you see a big man coming out from the house and stabs you for breaching the house rules."
         return
         
     "Map":
         "Wrong Choice!!"
+        show over
         "Suddenly you see a big man coming out from the house and stabs you for breaching the house rules."
         return
 
@@ -237,6 +249,7 @@ menu:
         
     "Code Map":
         "Wrong Choice!!"
+        show over
         "Suddenly you see a big man coming out from the house and stabs you for breaching the house rules."
         return
 
@@ -251,6 +264,7 @@ menu:
     "Hell yeah!":
                 "You reach fountain park and sit there talking for a few minutes"
                 "The time kept passing and in the heat of the moment you missed the reporting time of the competition."
+                show over
                 "You go back to the venue but of no use."
                 return
     "NO! I need to prepare myself":
@@ -304,7 +318,7 @@ with fade
 hide daisy
 
 "Failed! There are no shortcuts to programming. It's all practise. "
-
+show over
 "Next time don't let distractions ruin your game!"
 
 return
@@ -317,6 +331,8 @@ label codingRoundP:
 show dev
 
 p "The question is : "
+
+show pic3
 
 # Which of the following C++ code will give error on compilation?
 
@@ -342,22 +358,27 @@ p "The question is : "
 # c) Both code 1 and code 2
 # d) Code 2 only
 
-hide dev
+hide dev 
+"Choose the correct option"
 menu:
     "Code 1":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Neither code 1 nor code 2":
         "Congratulations! You won the game"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Both code 1 and code 2":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Code 2 only":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     
@@ -367,22 +388,30 @@ label codingRoundC:  #Ismein ek timer add hona hai
 show dev
 "The compeition begins"
 
+show pic3
+
+"Choose one"
+
+hide pic3
 menu:
-    
     "Code 1":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Neither code 1 nor code 2":
         "Congratulations! You won the game"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Both code 1 and code 2":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "Code 2 only":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return 
 
@@ -411,23 +440,29 @@ e "If you manage to win, you'll find your way home, else would always stay here.
 # else n == 3:      
 #    print ("three")
 
+show pic2
 e "The question says: Count the number of errors in the code"
 hide eric
+hide pic2
 menu:
     "1":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "4":
         "Congratulations! You won the game"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "3":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return
     "2":
         "Sorry, Wrong Choice"
+        show over
         "If you have just begin your coding journey, keep in mind only consistency can take you to the victory."
         return 
         

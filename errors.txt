@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 363: expected statement.
-    contest = " Find the errors in the code given below and correct the code:\n "
-            ^
+File "game/script.rpy", line 417: expected menuitem
+    hide eric
+    ^
 
 Ren'Py Version: Ren'Py 7.5.0.22050204n
-Sat May  7 10:06:36 2022
+Fri May 20 21:40:12 2022

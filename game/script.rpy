@@ -4,6 +4,7 @@
 # name of the character.
 
 
+
 define mc = Character(["mc"],
                      who_color="#c8ffc8")
 
@@ -11,6 +12,11 @@ define d = Character("Daisy",who_color = "#c56fe5")
 define e = Character("Eric Buggerman",who_color = "#ecce5b")
 define c = Character("Carl Patt",who_color = "#665599")
 define p = Character("Dev Patt",who_color = "#32b4a9")
+
+image daisy = "daisy.png"
+image eric = "eric.png"
+image pat = "pat.png"
+image dev = "dev.png"
 
 # The game starts here.
 
@@ -58,6 +64,8 @@ mc "This is a strange world! More of like..."
 
 mc "Wait no, I am in the world of numbers!\n\n(Your heart starts beating fast with anxiety around this unknown world folding many dangers)."
 
+show daisy
+
 d "Look who's here! Another one from the human world. The luring of programming holds the potential enough to pull anyone here."
 
 d "Hey! What's your Name?"
@@ -81,6 +89,8 @@ mc "My name is [mc]."
 
 d "Oh! Nice to meet you. I am Daisy."
 
+hide daisy
+
 menu:
     "Ask about her":
         jump herInfo
@@ -90,6 +100,8 @@ menu:
         jump nextStory
 
 label herInfo:
+
+show daisy
 
 mc "Tell me about you!" 
 
@@ -136,7 +148,8 @@ menu:
 
 
 label nextStory:
-
+    
+hide daisy
 mc "She seems weird. I need to know more about this party."
 
 mc "The gate is locked. To explore more about the party I need to find a way to unlock it!"
@@ -180,11 +193,14 @@ label ericStory:
 
 "You walk across the area and come across a shady place"
 
+show eric
+
 "A big man was sitting there with an eye on the mansion you came from."
 
 mc "Hey! Can you guide me about this coding pits and the venue?"
 
 "The gignatic man rose from his seat and stood tall in front of you"
+
 
 e "You dare to come into my area. Let's see what you have"
 
@@ -202,7 +218,7 @@ else:
 
 
 label pattStory:
-    
+  
 menu:
     "Code":
         "Wrong Choice!!"
@@ -215,6 +231,7 @@ menu:
         return
 
     "Error":
+        hide eric
         "Right Choice!!"
         jump pattStoryContinue
         
@@ -225,23 +242,30 @@ menu:
 
 
 label dPit:
-    d "There's time in the competitions, why not we hangout together till that time in the fountain park!"
     
-    menu:
-        "Hell yeah!":
-            "You reach fountain park and sit there talking for a few minutes"
-            "The time kept passing and in the heat of the moment you missed the reporting time of the competition."
-            "You go back to the venue but of no use."
-            return
-        "NO! I need to prepare myself":
-            jump codingRoundD
+show daisy
+
+d "There's time in the competitions, why not we hangout together till that time in the fountain park!"
+    
+menu:
+    "Hell yeah!":
+                "You reach fountain park and sit there talking for a few minutes"
+                "The time kept passing and in the heat of the moment you missed the reporting time of the competition."
+                "You go back to the venue but of no use."
+                return
+    "NO! I need to prepare myself":
+        jump codingRoundD
+
 
 label pattStoryContinue:
+    
+show dev
 
 c "So you're the one who came from earth this time."
 
 c "Every year many people come to us but only a few of them win, the one who have the dedication."
 
+show pat
 p "Tonight is the inaugral party of the coding pits."
 
 p "It's a contest where players come from earth and try hands on various coding problems."
@@ -263,6 +287,8 @@ menu:
      
 label codingRoundD:
 
+show daisy
+
 "The compeition begins"
 
 mc "Hey! Tell me the question. Only mentors have access to it."
@@ -275,6 +301,8 @@ d "I know the answer though, here the answer is Compilation Error"
 
 with fade
 
+hide daisy
+
 "Failed! There are no shortcuts to programming. It's all practise. "
 
 "Next time don't let distractions ruin your game!"
@@ -285,6 +313,8 @@ return
 label codingRoundP:
 
 "The compeition begins"
+
+show dev
 
 p "The question is : "
 
@@ -312,6 +342,7 @@ p "The question is : "
 # c) Both code 1 and code 2
 # d) Code 2 only
 
+hide dev
 menu:
     "Code 1":
         "Sorry, Wrong Choice"
@@ -333,6 +364,7 @@ menu:
     
 label codingRoundC:  #Ismein ek timer add hona hai
 
+show dev
 "The compeition begins"
 
 menu:
@@ -357,6 +389,8 @@ menu:
 
 label codingRoundE:
 
+show eric
+
 e "Hah! Right Answer"
 
 e "Tonight is the inaugral party of the coding pits."
@@ -378,7 +412,7 @@ e "If you manage to win, you'll find your way home, else would always stay here.
 #    print ("three")
 
 e "The question says: Count the number of errors in the code"
-
+hide eric
 menu:
     "1":
         "Sorry, Wrong Choice"

@@ -1,24 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 197, in script
-    if ans not "Y2K Bug" or "y2k bug":
-SyntaxError: invalid syntax (script.rpy, line 197)
+While loading <renpy.display.im.Image object (u'images/Eric.png') at 0x0000022571c78110>:
+  File "game/script.rpy", line 198, in script
+    e "You dare to come into my area. Let's see what you have"
+IOError: Couldn't find file 'images/Eric.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 197, in script
-    if ans not "Y2K Bug" or "y2k bug":
-  File "renpy/ast.py", line 2095, in execute
-    if renpy.python.py_eval(condition):
-  File "renpy/python.py", line 1068, in py_eval
-    code = py_compile(code, 'eval')
-  File "renpy/python.py", line 1005, in py_compile
+  File "game/script.rpy", line 198, in script
+    e "You dare to come into my area. Let's see what you have"
+  File "renpy/ast.py", line 901, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1368, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1254, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 918, in do_display
+    **display_args)
+  File "renpy/character.py", line 653, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3359, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3888, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2604, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 879, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 879, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 879, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/transform.py", line 748, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/image.py", line 505, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "renpy/display/image.py", line 308, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/im.py", line 627, in render
+    return cache.get(self, render=True)
+  File "renpy/display/im.py", line 295, in get
+    surf = image.load()
+  File "renpy/display/im.py", line 723, in load
     raise e
-SyntaxError: invalid syntax (script.rpy, line 197)
+IOError: Couldn't find file 'images/Eric.png'.
 
 Windows-10-10.0.22000
 Ren'Py 7.5.0.22050204n
 Codemap 1.0
-Sat May  7 09:17:59 2022
+Fri May 20 21:12:26 2022
